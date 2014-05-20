@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Example on how to use Marker Clusterer Plus and Overlapping Marker Spiderfier</title>
+    <meta name="description" content="Example on how to use Marker Clusterer Plus and Overlapping Marker Spiderfier">
+    <meta name="author" content="Yago Ferrer">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 10px 20px 20px;
+            font-family: Arial;
+            font-size: 16px;
+        }
+
+        #map-container {
+            padding: 6px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #ccc #ccc #999 #ccc;
+            width: 800px;
+        }
+
+        #map {
+            width: 800px;
+            height: 600px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="map-container">
+    <div id="map"></div>
+</div>
+
+
+<script src="http://maps.googleapis.com/maps/api/js?v=3.16&sensor=false"></script>
+<script src="bower_components/gmaps/gmaps.js"></script>
+<script src="bower_components/gmaps-markerclusterer-plus/src/markerclusterer.js"></script>
+<script src="bower_components/OverlappingMarkerSpiderfier/oms.js"></script>
+
+
+
+<script>
+    function initialize() {
+        var center = new google.maps.LatLng(37.4419, -122.1419);
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 6,
+            center: center,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+
+        var markers = [];
+        for (var i = 0; i < 15; i++) {
+
+
+            var latLng = new google.maps.LatLng(37.800289, -122.410183);
+
+            // Create Marker
+            var marker = new google.maps.Marker({
+                position: latLng
+            });
+
+            markers.push(marker);
+        }
+        var markerCluster = new MarkerClusterer(map, markers);
+
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+</body>
+</html>

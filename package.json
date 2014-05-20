@@ -1,0 +1,23 @@
+{
+  "name": "markerclusterer-plus-spiderfier-example",
+  "version": "1.0.0",
+  "description": "Example on how to use Marker Clusterer Plus and Overlapping Marker Spiderfier",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yagoferrer/markerclusterer-plus-spiderfier-example.git"
+  },
+  "author": "Yago Ferrer <yago.ferrer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yagoferrer/markerclusterer-plus-spiderfier-example/issues"
+  },
+  "homepage": "https://github.com/yagoferrer/markerclusterer-plus-spiderfier-example",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "ecstatic": "^0.5.3"
+  }
+}
