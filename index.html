@@ -48,8 +48,26 @@
 
 
 <script>
+
+
+    data = [
+        {lat: 37.4419, lon: -122.1419, title: "Marker same location 1"},
+        {lat: 37.4419, lon: -122.1419, title: "Marker same location 2"},
+        {lat: 37.4419, lon: -122.1419, title: "Marker same location 3"},
+        {lat: 37.4419, lon: -122.1419, title: "Marker same location 4"},
+        {lat: 37.4419, lon: -122.1419, title: "Marker same location 5"},
+        {lat: 37.4419, lon: -122.1380, title: "Marker close by 1"},
+    ]
+
+
+
+    var minClusterZoom = 15;
+
     function initialize() {
+
         var center = new google.maps.LatLng(37.4419, -122.1419);
+
+        var gm = google.maps;
 
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 6,
@@ -57,24 +75,53 @@
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
+        var oms = new OverlappingMarkerSpiderfier(map);
 
         var markers = [];
-        for (var i = 0; i < 15; i++) {
 
+        for (var x in data) {
 
-            var latLng = new google.maps.LatLng(37.800289, -122.410183);
+            var loc = new gm.LatLng(data[x].lat, data[x].lon);
 
-            // Create Marker
-            var marker = new google.maps.Marker({
-                position: latLng
+            var marker = new gm.Marker({
+                position: loc,
+                title: data[x].title,
+                map: map
             });
 
-            markers.push(marker);
+            marker.desc = data[x].title;
+
+            markers.push(marker); // Saving Markers
+
+            oms.addMarker(marker);  // <-- here
         }
+
+
+
+        var iw = new gm.InfoWindow();
+
+        oms.addListener('click', function(marker, event) {
+            iw.setContent(marker.title);
+            iw.open(map, marker);
+        });
+
+        oms.addListener('spiderfy', function(markers) {
+            iw.close();
+        });
+
+
+
         var markerCluster = new MarkerClusterer(map, markers);
 
+        markerCluster.setMaxZoom(minClusterZoom);
+
+
     }
+
+
     google.maps.event.addDomListener(window, 'load', initialize);
+
+
 </script>
 
 
