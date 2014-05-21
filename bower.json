@@ -14,7 +14,7 @@
     "tests"
   ],
   "devDependencies": {
-    "OverlappingMarkerSpiderfier": "https://github.com/yagoferrer/OverlappingMarkerSpiderfier.git#dev",
+    "OverlappingMarkerSpiderfier": "https://github.com/yagoferrer/OverlappingMarkerSpiderfier.git#0.3.3b",
     "gmaps": "https://github.com/yagoferrer/gmaps.git#0.4.12d",
     "gmaps-markerclusterer-plus": "https://github.com/mahnunchik/markerclustererplus.git#2.1.1"
   }
