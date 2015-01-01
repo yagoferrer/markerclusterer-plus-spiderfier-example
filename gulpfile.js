@@ -1,10 +1,16 @@
+'use strict';
+
 var gulp = require('gulp');
-var http = require('http');
-var ecstatic = require('ecstatic');
+var browserSync = require('browser-sync');
 
 gulp.task('default', function(){
-  http.createServer(
-    ecstatic({ root: __dirname })
-  ).listen(8080);
+
+  browserSync({
+    server: {
+      baseDir: "./"
+    },
+    open: true
+  });
+
 
 });
