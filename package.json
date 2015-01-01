@@ -4,6 +4,8 @@
   "description": "Example on how to use Marker Clusterer Plus and Overlapping Marker Spiderfier",
   "main": "index.js",
   "scripts": {
+    "postinstall": "./node_modules/bin/bower install",
+    "start": "./node_modules/bin/gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +19,8 @@
   },
   "homepage": "https://github.com/yagoferrer/markerclusterer-plus-spiderfier-example",
   "devDependencies": {
-    "gulp": "^3.6.2",
-    "ecstatic": "^0.5.3"
+    "bower": "^1.3.12",
+    "ecstatic": "^0.5.3",
+    "gulp": "^3.6.2"
   }
 }
