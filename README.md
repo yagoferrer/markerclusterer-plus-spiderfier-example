@@ -1,14 +1,21 @@
-markerclusterer-plus-spiderfier-example
-=======================================
+# Marker Clusterer Plus & Overlapping Marker Spiderfier
 
+This is an example on how to use Marker Clusterer Plus and a Overlapping Marker Spiderfier
+
+
+# How to install
+
+Run `npm install` to install all need it dependencies.
+```shell
 npm install
+```
 
-npm install -g bower
+Run `npm start` to see the example in action.
+```shell
+npm start
+```
 
-bower install
+Let me know if you find any issues.
 
-npm install -g gulp
+Thank you!
 
-gulp
-
-http://localhost:8080/
