@@ -1,8 +1,9 @@
 {
   "name": "markerclusterer-plus-spiderfier-example",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Example on how to use Marker Clusterer Plus and Overlapping Marker Spiderfier",
   "main": "index.js",
+  "keywords": ["Marker Clusterer", "Spiderfier", "Google Maps"],
   "scripts": {
     "postinstall": "./node_modules/bin/bower install",
     "start": "./node_modules/bin/gulp",
