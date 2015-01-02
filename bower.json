@@ -1,6 +1,6 @@
 {
   "name": "markerclusterer-plus-spiderfier-example",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/yagoferrer/markerclusterer-plus-spiderfier-example",
   "authors": [
     "Yago Ferrer <yago.ferrer@gmail.com>"
@@ -15,7 +15,6 @@
   ],
   "devDependencies": {
     "OverlappingMarkerSpiderfier": "https://github.com/yagoferrer/OverlappingMarkerSpiderfier.git#0.3.3b",
-    "gmaps": "https://github.com/yagoferrer/gmaps.git#0.4.12d",
-    "gmaps-markerclusterer-plus": "https://github.com/mahnunchik/markerclustererplus.git#2.1.1"
+    "gmaps-markerclusterer-plus": "~2.1.1"
   }
 }
